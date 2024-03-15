@@ -1,0 +1,175 @@
+:root {
+    --clr-primary-300: hsl(30, 38%, 92%);
+    --clr-primary-400:  hsl(158, 36%, 37%);
+    --clr-primary-500: hsl(158, 36%, 20%);
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-700: hsl(212, 21%, 14%);
+
+    --fs-300: 0.75rem;
+    --fs-400: 0.875rem;
+    --fs-500: 2rem;
+
+    --ff-default: "Montserrat", sans-serif;
+    --ff-accent: "Fraunces", serif; 
+
+    --fw-500: 500;
+    --fw-700: 700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, p {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1{
+  line-height: 1;
+}
+
+button {
+    line-height: 1.1;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* typography */
+.ff-default { font-family: var(--ff-default); }
+.ff-accent { font-family: var(--ff-accent); }
+
+.fs-300 { font-size: var(--fs-300); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-500 { font-size: var(--fs-500);}
+
+.fw-500 { font-weight: var(--fw-500); }
+.fw-700 { font-weight: var(--fw-700); }
+
+.uppercase { text-transform: uppercase; }
+
+.strike-through { text-decoration: line-through; }
+
+.letter-spacing-xs { letter-spacing: 5px; }
+
+/* colors */
+.bg-body { background: var(--clr-primary-300); }
+.bg-product { background: var(--clr-neutral-100); }
+.bg-button { background: var(--clr-primary-400);}
+
+.clr-default { color: var(--clr-neutral-400); }
+.clr-button { color: var(--clr-neutral-100); }
+.clr-heading { color: var(--clr-neutral-700); }
+.clr-accent { color: var(--clr-primary-400); }
+
+body {
+    place-items: center;
+}
+
+main {
+    margin-inline: 1rem;
+}
+
+.product {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product__group {
+    --spacing: 1rem;
+    padding: 1.5rem;
+}
+
+
+@media (min-width: 40em) {
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product__group {
+        --spacing: 1.25rem;
+        padding: 2rem;
+    }
+}
+
+.product__title {
+    margin-block: var(--spacing);
+}
+
+.price {
+    margin-block: var(--spacing);
+    align-items: center;
+    gap: 18.5px;
+}
+
+.button {
+    width: 100%;
+    padding: 1.2em 2em;
+    border: 0;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+button:is(:hover, :focus-visible) {
+    background: var(--clr-primary-500);
+}
+
+.button[data-icon="cart"]::before {
+    content: '';
+    background-image: url(./images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}   
+
+/* utility */
+.grid { display: grid;}
+.flex { display: flex; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

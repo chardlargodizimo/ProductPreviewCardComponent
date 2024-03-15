@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Preview Card Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="grid bg-body">
+    <main class="ff-default fw-500 fs-400 clr-default">
+        <article class="product | bg-product">
+            <picture>
+                <source srcset="./images/image-product-desktop.jpg" media="(min-width: 40em)">
+                <img src="./images/image-product-mobile.jpg" alt="Chanel Perfume">
+            </picture>
+            
+            <section class="product__group">
+                <p class="product__category | fs-300 uppercase letter-spacing-xs">Perfume</p>
+                <h1 class="product__title | ff-accent fw-700 fs-500 clr-heading">Gabrielle Essence Eau De Parfum</h1>
+                <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL</p>
+                <section class="price flex">
+                    <p class="ff-accent fw-700 fs-500 clr-accent">$149.99</p>
+                    <p class="strike-through">$169.99</p>
+                </section>
+                <button class="button | flex bg-button ff-default fs-400 clr-button fw-700" data-icon="cart">Add to Cart</button>
+            </section>
+        </article>
+    </main>
+</html>
